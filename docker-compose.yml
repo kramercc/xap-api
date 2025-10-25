@@ -17,10 +17,10 @@ services:
       GS_GSA_OPTIONS: "-Xms128m -Xmx128m"
       GS_GSC_OPTIONS: "-Xms4096m -Xmx4096m -Dspring.profiles.active=giga_unsecured -Dcom.gs.zones=demo-local"
     volumes:
+      - ./scripts:/opt/gigaspaces/scripts:ro
       - ./target/lib/commons-pool-1.6.jar:/opt/gigaspaces/lib/optional/pu-common/commons-pool-1.6.jar:ro
       - ./target/lib/commons-dbcp-1.4.jar:/opt/gigaspaces/lib/optional/pu-common/commons-dbcp-1.4.jar:ro
       - ./target/lib/ojdbc8-12.2.0.1.jar:/opt/gigaspaces/lib/optional/pu-common/ojdbc8-12.2.0.1.jar:ro
-      - ./scripts:/opt/gigaspaces/scripts:ro
     healthcheck:
       test: ["CMD", "/bin/bash", "/opt/gigaspaces/scripts/healthcheck.sh"]
       interval: 10s
