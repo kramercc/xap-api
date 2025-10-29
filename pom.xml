@@ -6,12 +6,16 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.mycompany.demo</groupId>
-    <artifactId>demo-xap-grid</artifactId>
+    <artifactId>demo-xap-api</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     
-    <name>XAP Grid Dependencies</name>
-    <description>Project to manage dependencies for XAP Grid deployment</description>
+    <name>XAP API Dependencies</name>
+    <description>Project to manage dependencies for XAP API deployment</description>
+    
+    <modules>
+        <module>modules/pu-stateful</module>
+    </modules>
     
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
